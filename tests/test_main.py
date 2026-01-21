@@ -41,7 +41,7 @@ def test_SpectraZenAzm():
     material = 'LiteSoil'
     min_wavelength = 300
     max_wavelength = 4000
-    smarts_res = pySMARTS.SMARTSSpectraZenAzm('2 3 4', str(zen), str(azm),
+    smarts_res = pySMARTS.SMARTSSpectraZenAzm(IOUT='2 3 4', ZENITH=str(zen), AZIM=str(azm),
                                      material=material,
                                      min_wvl=str(min_wavelength),
                                      max_wvl=str(max_wavelength))
