@@ -2713,9 +2713,9 @@ def _smartsAll(CMNT, ISPR, SPR, ALTIT, HEIGHT, LATIT, IATMOS, ATMOS, RH, TAIR, S
         
         ## Read SMARTS 2.9.5 Output File
         try:
-            data = pd.read_csv('smarts295.ext.txt', delim_whitespace=True) #sep=r'\s+'
+            data = pd.read_csv('smarts295.ext.txt', sep=r'\s+', ) #delim_whitespace=True
         except FileNotFoundError:
-            data = pd.read_csv(os.path.join('OUTPUT','smarts295.ext.txt'), delim_whitespace=True)
+            data = pd.read_csv(os.path.join('OUTPUT','smarts295.ext.txt'), sep=r'\s+', ) 
     # try:
     #     os.remove('smarts295.inp.txt')
     # except:
